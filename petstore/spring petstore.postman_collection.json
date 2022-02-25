@@ -1,0 +1,190 @@
+{
+	"info": {
+		"_postman_id": "6876375a-2137-4632-b4b4-554877e5511f",
+		"name": "spring petstore",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "post pet",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "delete pet",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"id\":4,\n  \"category\": {\n    \"id\": 2,\n    \"name\": \"Cat\"\n  },\n  \"name\": \"Lokiiii\",\n  \"photoUrls\":[ \"cat1.jpg\",\"cat2.jpg\"],\n  \"tags\": [\n    {\n      \"id\":  14,\n      \"name\": \"black\"\n    },\n     {\n      \"id\":  21,\n      \"name\": \"black\"\n    }\n  ],\n  \"status\": \"available\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/PetStore/pet/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"PetStore",
+						"pet",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get pet deatils",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "qburst",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "aswathi",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n            \"id\": 2,\n            \"name\": \"lab\",\n            \"photoUrls\": [\n                \"doggie.jpg\",\"dog3.png\"\n            ],\n            \"tags\": [\n                {\n                    \"id\": 13,\n                    \"name\": \"pet\"\n                }\n            ],\n            \"category\": {\n                \"id\": 1,\n                \"name\": \"Dog\"\n            },\n            \"status\": \"available\"\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/petstore/pet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"petstore",
+						"pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n            \"id\": 5,\n            \"name\": \"lab\",\n            \"photoUrls\": [\n                \"doggie.jpg\",\n                \"lab.png\"\n            ],\n            \"tags\": [\n                {\n                    \"id\": 13,\n                    \"name\": \"pet\"\n                }\n            ],\n            \"category\": {\n                \"id\": 1,\n                \"name\": \"Dog\"\n            },\n            \"status\": \"available\"\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/PetStore/pet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"PetStore",
+						"pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post user",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "qburst",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "aswathi",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"userName\":\"aswathi\",\n        \"firstName\": \"aswathi\",\n        \"lastName\": \"muraleedharan\",\n        \"email\": \"aswathy.m@qburst.com\",\n        \"password\": \"qburst\",\n        \"phone\": \"+91 6238011079\",\n        \"userStatus\": 1\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/petstore/user/aswathi",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"petstore",
+						"user",
+						"aswathi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	]
+}
